@@ -1,0 +1,31 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v2",
+        "update_url": null
+    },
+    "exported_at": "2023-06-22T11:09:33+02:00",
+    "name": "NorthClient-Egg",
+    "author": "hello@trat.tech",
+    "description": "An egg for pterodactyl panel to install the NorthClient. Build by @trat.",
+    "features": null,
+    "docker_images": {
+        "ghcr.io\/parkervcp\/yolks:nodejs_16": "ghcr.io\/parkervcp\/yolks:nodejs_16"
+    },
+    "file_denylist": [],
+    "startup": "\/usr\/local\/bin\/npm install multer --silent; \/usr\/local\/bin\/node \/home\/container\/index.js",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"Thankyou for using NorthClient\"\r\n}",
+        "logs": "{}",
+        "stop": "^^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!\/bin\/bash\r\necho -e \"Egg by @trat.\"\r\necho -e \"To receive support, feel free to join our Discord server: https:\/\/discord.gg\/DUyS9u8WWN\"\r\necho -e \"The installation process has commenced.\"\r\necho -e \"The installation is estimated to take approximately 5 minutes, but the duration may vary based on your VPS performance.\"\r\n\r\n    apt update\r\n    apt install git curl jq file unzip make gcc g++ python python-dev libtool wget -y\r\n    \r\n    echo -e \"Retrieving the most recent NorthClient files from the GitHub repository.....\"\r\n    mkdir -p \/mnt\/server\r\n    cd \/mnt\/server\r\n    \r\n    git clone https:\/\/github.com\/NorthDevelopment\/NorthClient .\r\n        \/usr\/local\/bin\/npm install --production --silent\r\n    echo -e \"Successfully installed NorthClientClient!\"\r\n    echo -e \"\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\"\r\n    echo -e \"Website: https:\/\/northdevelopment.tech\"\r\n    echo -e \"Discord: https:\/\/discord.gg\/DUyS9u8WWN\"\r\n    echo -e \"Github:  https:\/\/github.com\/NorthDevelopment\"\r\n    echo -e \"\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\"\r\n    echo -e \"@trat.:  https:\/\/trat.tech\"\r\n    echo -e \"\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\"\r\nexit 0",
+            "container": "node:16-buster-slim",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": []
+}
